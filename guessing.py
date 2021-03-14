@@ -5,15 +5,19 @@
 
 
 import random
+start = input('請決定隨機數字範圍開始值:')
+end = input('請決定隨機數字範圍結束值:')
+start = int(start)
+end = int(end)
 
-r = random.randint(1, 100)
-i = 0
+r = random.randint(start, end)
+count = 0
 
 while True:
-	i = i + 1
-	num = input('請猜數字')
+	count += 1 #count = count + 1
+	num = input('請猜數字:')
 	num = int(num)
-	print('你已經猜了', i, '次')
+	print('你已經猜了', count, '次')
 	if num == r:
 		print('終於猜對了！')
 		break
